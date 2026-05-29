@@ -1,30 +1,39 @@
-# Disease Risk Predictor
-
-## What it does
-Predicts diabetes and heart disease risk based on patient 
-health parameters using Machine Learning.
+# Disease Risk Predictor — XGBoost Upgraded
 
 ## Models
-- Diabetes — 94% accuracy, catches 72% of diabetic patients
-- Heart Disease — 85% accuracy, catches 89% of heart disease patients
 
-## How it works
-- Random Forest Classifier for both diseases
-- Handled class imbalance using class_weight='balanced'
-- Full input validation and edge case handling
-- Returns risk probability not just binary prediction
+### Diabetes Model
+- Algorithm: XGBoost with hyperparameter tuning
+- AUC: 0.948
+- Diabetic patient recall: 0.83
+- CV Mean AUC: 0.943 — stable across 5 folds
+- Threshold tuned to 0.3 for aggressive screening
+- Most important feature: HbA1c level
 
-## Why this matters
-Rural populations lack access to diagnostic facilities.
-This tool acts as an early risk screening system.
+### Heart Disease Model  
+- Algorithm: XGBoost with hyperparameter tuning
+- AUC: 0.904
+- Heart disease recall: 0.93
+- CV Mean AUC: 0.886
+- Threshold tuned to 0.48 for balanced screening
+- Most important feature: Chest pain type (cp)
 
-## Dataset
-- Diabetes: Kaggle diabetes prediction dataset
-- Heart Disease: UCI Heart Disease dataset
+## Why XGBoost
+Upgraded from Random Forest to XGBoost with:
+- GridSearchCV hyperparameter tuning
+- Stratified K-Fold cross validation
+- Custom threshold tuning for healthcare context
+- Feature importance analysis
+
+## Clinical Reasoning
+- Diabetes threshold 0.3 — aggressive screening catches 83% of diabetics
+- Heart disease threshold 0.48 — balanced approach catches 93% of patients
+- HbA1c being top feature aligns with clinical diabetes diagnosis
+- Chest pain type being top feature aligns with cardiology practice
+
+## Why This Matters
+Rural populations lack diagnostic access.
+This tool acts as early screening — not diagnosis replacement.
 
 ## Libraries
-Pandas, Scikit-learn, Numpy
-
-## Example Output
-predict_diabetes('Male', 60, 1, 1, 'current', 35.0, 8.5)
-→ High diabetes risk. Probability: 87%
+Pandas, XGBoost, Scikit-learn, Numpy, Matplotlib
