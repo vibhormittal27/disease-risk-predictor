@@ -57,5 +57,5 @@ Final model: XGBoost selected for both diseases
 Reason: Highest recall — critical for healthcare screening
 
 ## ROC Curves
-![Diabetes ROC](roc_curve_diabetes.png)
-![Heart Disease ROC](roc_curve_heart.png)
+![Diabetes ROC](<img width="1484" height="881" alt="roc_curve_diabetes" src="https://github.com/user-attachments/assets/3aeecb06-e148-4e08-a61e-9451ad33faa9" />)
+![Heart Disease ROC](<img width="1484" height="1331" alt="roc_curve_heart" src="https://github.com/user-attachments/assets/c2b24954-8e7e-4293-bd3a-45017cbba8ca" />)
