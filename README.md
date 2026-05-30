@@ -37,3 +37,21 @@ This tool acts as early screening — not diagnosis replacement.
 
 ## Libraries
 Pandas, XGBoost, Scikit-learn, Numpy, Matplotlib
+## Model Comparison
+
+### Diabetes
+| Model | Recall | Precision | AUC |
+|-------|--------|-----------|-----|
+| Random Forest | 0.72 | 0.51 | — |
+| XGBoost | 0.83 | 0.41 | 0.948 |
+| LightGBM | 0.72 | 0.53 | 0.944 |
+
+### Heart Disease
+| Model | Recall | Precision | AUC |
+|-------|--------|-----------|-----|
+| Random Forest | 0.89 | 0.85 | — |
+| XGBoost | 0.93 | 0.66 | 0.904 |
+| LightGBM | 0.87 | 0.74 | — |
+
+Final model: XGBoost selected for both diseases
+Reason: Highest recall — critical for healthcare screening
