@@ -51,7 +51,7 @@ Pandas, XGBoost, Scikit-learn, Numpy, Matplotlib
 |-------|--------|-----------|-----|
 | Random Forest | 0.89 | 0.85 | — |
 | XGBoost | 0.93 | 0.66 | 0.904 |
-| LightGBM | 0.87 | 0.74 | — |
+| LightGBM | 0.87 | 0.74 | 0.89 |
 
 Final model: XGBoost selected for both diseases
 Reason: Highest recall — critical for healthcare screening
