@@ -55,3 +55,7 @@ Pandas, XGBoost, Scikit-learn, Numpy, Matplotlib
 
 Final model: XGBoost selected for both diseases
 Reason: Highest recall — critical for healthcare screening
+
+## ROC Curves
+![Diabetes ROC](roc_curve_diabetes.png)
+![Heart Disease ROC](roc_curve_heart.png)
